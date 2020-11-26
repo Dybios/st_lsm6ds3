@@ -51,7 +51,7 @@
 #define ST_LSM6DS3_ACCEL_DRDY_IRQ_MASK		0x01
 #define ST_LSM6DS3_GYRO_DRDY_IRQ_MASK		0x02
 #define ST_LSM6DS3_MD1_ADDR			0x5e
-#define ST_LSM6DS3_ODR_LIST_NUM			6
+#define ST_LSM6DS3_ODR_LIST_NUM			10
 #define ST_LSM6DS3_ODR_POWER_OFF_VAL		0x00
 #define ST_LSM6DS3_ODR_13HZ_VAL			0x01
 #define ST_LSM6DS3_ODR_26HZ_VAL			0x02
@@ -59,6 +59,10 @@
 #define ST_LSM6DS3_ODR_104HZ_VAL		0x04
 #define ST_LSM6DS3_ODR_208HZ_VAL		0x05
 #define ST_LSM6DS3_ODR_416HZ_VAL		0x06
+#define ST_LSM6DS3_ODR_833HZ_VAL		0x07
+#define ST_LSM6DS3_ODR_1666HZ_VAL		0x08
+#define ST_LSM6DS3_ODR_3332HZ_VAL		0x09
+#define ST_LSM6DS3_ODR_6664HZ_VAL		0x0A
 #define ST_LSM6DS3_FS_LIST_NUM			4
 #define ST_LSM6DS3_BDU_ADDR			0x12
 #define ST_LSM6DS3_BDU_MASK			0x40
@@ -256,6 +260,10 @@ static struct st_lsm6ds3_odr_table {
 	.odr_avl[3] = { .hz = 104, .value = ST_LSM6DS3_ODR_104HZ_VAL },
 	.odr_avl[4] = { .hz = 208, .value = ST_LSM6DS3_ODR_208HZ_VAL },
 	.odr_avl[5] = { .hz = 416, .value = ST_LSM6DS3_ODR_416HZ_VAL },
+	.odr_avl[6] = { .hz = 833, .value = ST_LSM6DS3_ODR_833HZ_VAL },
+	.odr_avl[7] = { .hz = 1666, .value = ST_LSM6DS3_ODR_1666HZ_VAL },
+	.odr_avl[8] = { .hz = 3332, .value = ST_LSM6DS3_ODR_3332HZ_VAL },
+	.odr_avl[9] = { .hz = 6664, .value = ST_LSM6DS3_ODR_6664HZ_VAL },
 };
 
 struct st_lsm6ds3_fs_reg {
